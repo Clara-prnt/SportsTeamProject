@@ -1,9 +1,16 @@
-:root {
+:root, #root {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,15 +20,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#root {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 a {
@@ -55,11 +53,12 @@ div, div p {
 }
 
 .main {
+  height: 100%;
   width: 100%;
-  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
 }
 
 footer {
@@ -95,7 +94,7 @@ footer {
   background: #1a1a1a;
 }
 .menu-links a {
-  color: #00aaff; /* Link color */
+  color: #00aaff;
   text-decoration: none;
   margin-left: 20px;
   font-size: 1rem;
@@ -121,6 +120,18 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input, select {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.6em 1.2em;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
 @media (prefers-color-scheme: light) {

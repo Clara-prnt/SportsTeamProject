@@ -10,6 +10,7 @@ export const CreateTeamForm: React.FC<CreateTeamFormProps> = ({ onTeamAdded }) =
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState<string | null>(null);
 
+    // When the form is submitted, send a POST request to the server
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!name) {
@@ -18,6 +19,7 @@ export const CreateTeamForm: React.FC<CreateTeamFormProps> = ({ onTeamAdded }) =
         }
 
         try {
+            // Try to add the team into the db.json file
             await axios.post('http://localhost:3001/teams', { name, players: [] });
             setName('');
             setError(null);
@@ -30,7 +32,6 @@ export const CreateTeamForm: React.FC<CreateTeamFormProps> = ({ onTeamAdded }) =
                 setError('Failed to create the team.');
             }
             setSuccess(null);
-            console.error('Error creating team:', error);
         }
     };
 
@@ -38,6 +39,7 @@ export const CreateTeamForm: React.FC<CreateTeamFormProps> = ({ onTeamAdded }) =
         <>
             <form onSubmit={handleSubmit}>
                 <h2>Create Team</h2>
+                {/* Display an error or success message if needed */}
                 {error && <p className="error">{error}</p>}
                 {success && <p className="success">{success}</p>}
                 <div>

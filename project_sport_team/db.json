@@ -60,12 +60,60 @@
       "name": "La Rochelle",
       "players": [
         {
-          "name": "Pierre Paulmier",
-          "position": "Forward"
+          "name": "Lucas Bobe",
+          "position": "Goalkeeper"
         },
         {
-          "name": "Guillaume Roturier",
-          "position": "Right Fullback"
+          "name": "Anthony Robin",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Manassé Enza-Yamissi",
+          "position": "Center Back"
+        },
+        {
+          "name": "Mamadou Camara",
+          "position": "Center Back"
+        },
+        {
+          "name": "Christopher Graffin",
+          "position": "Center Back"
+        },
+        {
+          "name": "Benjamin Popsé",
+          "position": "Center Back"
+        },
+        {
+          "name": "Sacha Le Ven",
+          "position": "Centre-Back"
+        },
+        {
+          "name": "Anthony Delavaud",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Naoufel Fredj",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Modibo Fofana",
+          "position": "Midfielder"
+        },
+        {
+          "name": "Maxime Ongmakon",
+          "position": "Centre-Forward"
+        },
+        {
+            "name": "Alexandre Polo",
+            "position": "Striker"
+        },
+        {
+            "name": "Amadou Soumah",
+            "position": "Centre-Forward"
+        },
+        {
+            "name": "Vincent Ugarte",
+            "position": "Striker"
         }
       ]
     },

@@ -5,11 +5,11 @@ interface MenuProps {
     teamName: string; // The name of the current team to display
 }
 
-/* --------- Teams reactions --------- */
+/* --------- Team reactions --------- */
 export const Warning: React.FC = () => <p className="warning">Warning: Fewer than 11 players!</p>;
 export const Info: React.FC = () => <p className="info">Team is ready with 11 or more players.</p>;
 
-/* --------- HTML parts --------- */
+/* --------- Webpage parts --------- */
 export const Body: React.FC<{ players: { id: number; name: string; position: string }[] }> = ({ players }) => (
     <>
         {players.map(player => (
@@ -28,18 +28,4 @@ export const Menu: React.FC<MenuProps> = ({ teamName }) => {
         </div>
     );
 };
-
-/*export const Main: React.FC<MainProps> = ({ players }) => (
-    <div className="main">
-        <h1>Welcome to the Sports App!</h1>
-        {players.length < 11 ? (
-            <Warning/>
-        ) : (
-            <Info/>
-        )}
-        {players.map((player) => (
-            <div key={player.id}>{player.name}</div>
-        ))}
-    </div>
-);*/
 export const Footer: React.FC = () => <footer>© 2025 Sports Typescript Webpage Clara PERNET</footer>;

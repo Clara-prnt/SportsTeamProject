@@ -20,18 +20,20 @@ export const CreatePlayerForm: React.FC<CreatePlayerFormProps> = ({ onPlayerAdde
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState<string | null>(null);
 
+    // Fetch the list of teams
     useEffect(() => {
-        // Fetch the list of teams
         axios.get('http://localhost:3001/teams')
             .then(response => setTeams(response.data))
             .catch(error => console.error('Error fetching teams:', error));
     }, []);
 
+    // Update the total player count
     useEffect(() => {
         const totalPlayers = teams.reduce((count, team) => count + team.players.length, 0);
         setPlayerCount(totalPlayers);
     }, [teams]);
 
+    // When the form is submitted, send a POST request to the server
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!name || !position || !teamId) {
@@ -40,6 +42,7 @@ export const CreatePlayerForm: React.FC<CreatePlayerFormProps> = ({ onPlayerAdde
         }
 
         try {
+            // Find the selected team and add the player to it
             const team = teams.find(t => t.id === teamId);
             if (team) {
                 team.players.push({ name, position });
@@ -60,7 +63,6 @@ export const CreatePlayerForm: React.FC<CreatePlayerFormProps> = ({ onPlayerAdde
             } else {
                 setError('Failed to add the player.');
             }
-            console.error('Error adding player:', error);
             setSuccess(null);
         }
     };
@@ -69,6 +71,7 @@ export const CreatePlayerForm: React.FC<CreatePlayerFormProps> = ({ onPlayerAdde
         <>
             <form onSubmit={handleSubmit}>
                 <h2>Add Player</h2>
+                {/* Display an error or success message if needed */}
                 {error && <p className="error">{error}</p>}
                 {success && <p className="success">{success}</p>}
                 <div>
