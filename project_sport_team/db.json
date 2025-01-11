@@ -1,3 +1,88 @@
 {
-  "teams": []
+  "teams": [
+    {
+      "id": "b1de",
+      "name": "Metz",
+      "players": [
+        {
+          "name": "Arnaud Bodart",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Alexandre Oukidja",
+          "position": "Goalkeeper"
+        },
+        {
+          "name": "Fali Candé",
+          "position": "Center Back"
+        },
+        {
+          "name": "Ismaël Traoré",
+          "position": "Center Back"
+        },
+        {
+          "name": "Matthieu Udol",
+          "position": "Left Fullback"
+        },
+        {
+          "name": "Kevin Van Den Kerkhof",
+          "position": "Right Fullback"
+        },
+        {
+          "name": "Koffi Kouao",
+          "position": "Right Fullback"
+        },
+        {
+          "name": "Benjamin Stambouli",
+          "position": "Center Midfield"
+        },
+        {
+          "name": "Alpha Touré",
+          "position": "Center Midfield"
+        },
+        {
+          "name": "Cheikh Sabaly",
+          "position": "Left Midfield"
+        },
+        {
+          "name": "Ibou Sané",
+          "position": "Forward"
+        }
+      ]
+    },
+    {
+      "id": "5bc3",
+      "name": "Nancy",
+      "players": []
+    },
+    {
+      "id": "f6df",
+      "name": "La Rochelle",
+      "players": [
+        {
+          "name": "Pierre Paulmier",
+          "position": "Forward"
+        },
+        {
+          "name": "Guillaume Roturier",
+          "position": "Right Fullback"
+        }
+      ]
+    },
+    {
+      "id": "5626",
+      "name": "Nantes",
+      "players": []
+    },
+    {
+      "id": "692f",
+      "name": "Test",
+      "players": []
+    },
+    {
+      "id": "b686",
+      "name": "Fribourg (CH)",
+      "players": []
+    }
+  ]
 }

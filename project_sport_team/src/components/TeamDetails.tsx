@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Body, Info, Warning} from "./Exports.tsx";
 
 interface TeamListProps {
@@ -6,13 +6,22 @@ interface TeamListProps {
     currentTeam: { players: { id: number; name: string; position: string }[] } | null;
 }
 
-const TeamList: React.FC<TeamListProps> = ({ loading, currentTeam }) => {
+const TeamDetails: React.FC<TeamListProps> = ({ loading, currentTeam }) => {
+    const [playerCount, setPlayerCount] = useState(0);
+
+    useEffect(() => {
+        if (currentTeam) {
+            setPlayerCount(currentTeam.players.length);
+        }
+    }, [currentTeam]);
+
     return (
         <div>
             {loading ? (
                 <p>Loading team data...</p>
             ) : currentTeam ? (
                 <>
+                    <p>Number of players: {playerCount}</p>
                     {currentTeam.players.length < 11 ? <Warning/> : <Info/>}
                     <Body players={currentTeam.players}/>
                 </>
@@ -23,4 +32,4 @@ const TeamList: React.FC<TeamListProps> = ({ loading, currentTeam }) => {
     );
 }
 
-export default TeamList;
+export default TeamDetails;
